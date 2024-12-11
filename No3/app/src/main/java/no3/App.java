@@ -23,7 +23,7 @@ public class App {
         }
         
         
-        if (day < 1 || day > getDaysInMonth(month, year)) {
+        if (day < 1 || day > getDaysInMonth(month)) {
             System.out.println("wrong values");
             return;
         }
@@ -33,7 +33,7 @@ public class App {
     }
     
     // ฟังก์ชันคืนค่าจำนวนวันที่ในแต่ละเดือน
-    public static int getDaysInMonth(int month, int year) {
+    public static int getDaysInMonth(int month) {
         switch (month) {
             case 2: // กุมภาพันธ์
                     return 28; // ปีปกติ
@@ -68,7 +68,7 @@ public class App {
                 checkInput(day, month, year);
     
                 // ถ้าค่าถูกต้องแล้วให้หยุดการวนลูป
-                if (year >= 2500 && year <= 2565 && month >= 1 && month <= 12 && day >= 1 && day <= getDaysInMonth(month, year)) {
+                if (year >= 2500 && year <= 2565 && month >= 1 && month <= 12 && day >= 1 && day <= getDaysInMonth(month)) {
                     break;
                 }
             }
