@@ -9,7 +9,7 @@ public class App {
         return "Hello World!";
     }
 
-    public class PrimeNumberFinder {
+    public class PrimeExample2 {
         public static boolean isPrime(int n) {
 
             for (int i = 2; i <= Math.sqrt(n); i++) {
@@ -17,6 +17,7 @@ public class App {
                     return false; 
                 }
             }
+            
             return true; 
         }
 

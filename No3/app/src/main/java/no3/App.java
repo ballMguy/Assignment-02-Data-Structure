@@ -35,21 +35,30 @@ public class App {
     // ฟังก์ชันคืนค่าจำนวนวันที่ในแต่ละเดือน
     public static int getDaysInMonth(int month) {
         switch (month) {
-            case 2: // กุมภาพันธ์
-                    return 28; // ปีปกติ
             case 1: // มกราคม 
+                return 31;
+            case 2: // กุมภาพันธ์
+                return 28;    
             case 3: // มีนาคม
-            case 5: // พฤษภาคม
-            case 7: // กรกฎาคม 
-            case 8: // สิงหาคม
-            case 10: // ตุลาคม
-            case 12: // ธันวาคม
                 return 31;
             case 4: // เมษายน
+                return 30;
+            case 5: // พฤษภาคม
+                return 31;
             case 6: // มิถุนายน
+                return 30;
+            case 7: // กรกฎาคม 
+                return 31;
+            case 8: // สิงหาคม
+                return 31;
             case 9: // กันยายน
+                return 30;
+            case 10: // ตุลาคม
+                return 31;
             case 11: // พฤศจิกายน
                 return 30;
+            case 12: // ธันวาคม
+                return 31;
             default:
                 return 0; // คืนค่าผิดพลาด หากเดือนไม่ถูกต้อง
         }
