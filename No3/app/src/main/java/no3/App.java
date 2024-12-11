@@ -12,19 +12,19 @@ public class App {
     public static void checkInput(int day, int month, int year) {
         
         if (year < 2500 || year > 2565) {
-            System.out.println("wrong value(s)");
+            System.out.println("wrong values");
             return;
         }
         
         
         if (month < 1 || month > 12) {
-            System.out.println("wrong value(s)");
+            System.out.println("wrong values");
             return;
         }
         
         
         if (day < 1 || day > getDaysInMonth(month, year)) {
-            System.out.println("wrong value(s)");
+            System.out.println("wrong values");
             return;
         }
         
@@ -65,7 +65,6 @@ public class App {
                 System.out.print("Enter year: ");
                 int year = sc.nextInt();
     
-                // เรียกฟังก์ชันตรวจสอบข้อมูล
                 checkInput(day, month, year);
     
                 // ถ้าค่าถูกต้องแล้วให้หยุดการวนลูป
