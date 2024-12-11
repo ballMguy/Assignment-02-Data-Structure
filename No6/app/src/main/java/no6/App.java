@@ -3,12 +3,44 @@
  */
 package no6;
 
+import java.util.Scanner;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Scanner sc = new Scanner(System.in);
+        int[][] arr = new int[3][3];
+        int[][] transpose = new int[3][3];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("Enter matrix index of [" + i + "][" + j + "]: ");
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Normal Matrix is");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println(); 
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                transpose[i][j] = arr[j][i];
+            }
+        }
+        System.out.println("Matrix Transpose is");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(transpose[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
